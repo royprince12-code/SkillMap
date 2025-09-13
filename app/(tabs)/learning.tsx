@@ -170,24 +170,23 @@ export default function LearningScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#111827',
+    backgroundColor: '#000000',
   },
   header: {
-    backgroundColor: '#1F2937',
+    backgroundColor: '#1E40AF',
     paddingTop: 60,
     paddingHorizontal: 20,
     paddingBottom: 24,
-    borderBottomWidth: 0,
   },
   title: {
     fontSize: 28,
     fontWeight: '800',
-    color: '#F9FAFB',
+    color: '#ffffff',
     marginBottom: 4,
   },
   subtitle: {
     fontSize: 16,
-    color: '#9CA3AF',
+    color: 'rgba(255, 255, 255, 0.8)',
   },
   content: {
     flex: 1,

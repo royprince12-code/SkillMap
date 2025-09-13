@@ -6,18 +6,10 @@ import { QuickPrompt } from '@/components/QuickPrompt';
 
 export default function CoachScreen() {
   const [message, setMessage] = useState('');
-  type ChatType = 'ai' | 'user';
-  type ChatHistoryItem = {
-    id: string;
-    type: ChatType;
-    content: string;
-    timestamp: string;
-  };
-
-  const [chatHistory, setChatHistory] = useState<ChatHistoryItem[]>([
+  const [chatHistory, setChatHistory] = useState([
     {
       id: '1',
-      type: 'ai',
+      type: 'ai' as const,
       content: "Hi! I'm your AI Career Coach. I can help you with career guidance, resume feedback, interview preparation, and skill development. What would you like to work on today?",
       timestamp: new Date().toLocaleTimeString(),
     },
@@ -154,14 +146,13 @@ export default function CoachScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#111827',
+    backgroundColor: '#000000',
   },
   header: {
-    backgroundColor: '#1F2937',
+    backgroundColor: '#1E40AF',
     paddingTop: 60,
     paddingHorizontal: 20,
     paddingBottom: 16,
-    borderBottomWidth: 0,
   },
   titleContainer: {
     flexDirection: 'row',
@@ -171,11 +162,11 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: '800',
-    color: '#F9FAFB',
+    color: '#ffffff',
   },
   subtitle: {
     fontSize: 14,
-    color: '#9CA3AF',
+    color: 'rgba(255, 255, 255, 0.8)',
   },
   chatContainer: {
     flex: 1,

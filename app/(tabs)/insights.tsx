@@ -7,14 +7,7 @@ import { TrendingSkillCard } from '@/components/TrendingSkillCard';
 export default function InsightsScreen() {
   const [timeframe, setTimeframe] = useState('month');
 
-  const marketInsights: {
-    title: string;
-    value: string;
-    change: string;
-    trend: 'up' | 'down';
-    icon: React.ComponentType<any>;
-    description: string;
-  }[] = [
+  const marketInsights = [
     {
       title: 'Job Openings',
       value: '1.2M+',
@@ -49,13 +42,7 @@ export default function InsightsScreen() {
     },
   ];
 
-  const trendingSkills: {
-    skill: string;
-    growth: string;
-    demand: string;
-    avgSalary: string;
-    trend: 'rising' | 'stable' | 'falling';
-  }[] = [
+  const trendingSkills = [
     {
       skill: 'AI/Machine Learning',
       growth: '+45%',
@@ -222,24 +209,23 @@ export default function InsightsScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#111827',
+    backgroundColor: '#000000',
   },
   header: {
-    backgroundColor: '#1F2937',
+    backgroundColor: '#1E40AF',
     paddingTop: 60,
     paddingHorizontal: 20,
     paddingBottom: 24,
-    borderBottomWidth: 0,
   },
   title: {
     fontSize: 28,
     fontWeight: '800',
-    color: '#F9FAFB',
+    color: '#ffffff',
     marginBottom: 4,
   },
   subtitle: {
     fontSize: 16,
-    color: '#9CA3AF',
+    color: 'rgba(255, 255, 255, 0.8)',
   },
   content: {
     flex: 1,
